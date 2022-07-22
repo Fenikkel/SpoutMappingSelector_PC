@@ -113,7 +113,7 @@ public class ConnectionStateController : MonoBehaviour
 	private void Ping()
 	{
 		OSCMessage message = new OSCMessage(m_SendingOscAddress);
-		//message.AddValue(OSCValue.String("Hello, world! DEBUG")); // No funciona con Touch si no es float, int o doble y lo indicas bien en touch que tipo es.
+		//message.AddValue(OSCValue.String("Hello, world! DEBUG")); // No funciona con Touch Designer si no es float, int o doble. Además has de indicar bien en Touch que tipo es.
 		message.AddValue(OSCValue.Float(m_TimeBetweenPings)); //We indicate to the receiver that we gonna pink every m_TimeBetweenPings value;
 
 		m_Transmitter.Send(message);
